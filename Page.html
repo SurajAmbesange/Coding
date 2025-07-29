@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suraj Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e272e;
+  padding: 20px 40px;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo span {
+  color: #00cec9;
+}
+
+.menu a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu a:hover {
+  color: #00cec9;
+}
+
+/* Hero Section */
+
+ 
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  background: white;
+}
+
+.hero-text {
+  flex: 1;
+}
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.hero-text p {
+  font-size: 18px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+.hero-image img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+/* Fun Facts */
+.fun-facts {
+  background-color: #dff9fb;
+  padding: 50px 20px;
+  text-align: center;
+}
+.facts-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+.fact h3 {
+  font-size: 32px;
+  color: #130f40;
+}
+.fact p {
+  margin-top: 5px;
+}
+
+/* Countdown */
+.countdown {
+  background: #f1f2f6;
+  text-align: center;
+  padding: 40px 20px;
+}
+.countdown h2 {
+  margin-bottom: 20px;
+}
+.timer {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e17055;
+}
+
+/* Logo Carousel */
+.logo-carousel {
+  padding: 40px 20px;
+  background: white;
+  text-align: center;
+}
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.carousel-track img {
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+.carousel-track img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Suraj<span>Dev</span></div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Build Future-Ready Websites</h1>
+      <p>I’m Suraj, a front-end developer passionate about building responsive & modern user experiences.</p>
+    </div>
+    <div class="hero-image">
+      <img src="Suraj.jpeg" alt="Web Dev Illustration">
+    </div>
+  </section>
+
+  <!-- Fun Fact Section -->
+  <section class="fun-facts">
+    <h2>Fun Facts</h2>
+    <div class="facts-container">
+      <div class="fact">
+        <h3>50+</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="fact">
+        <h3>100%</h3>
+        <p>Responsive Designs</p>
+      </div>
+      <div class="fact">
+        <h3>24/7</h3>
+        <p>Code Enthusiasm</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdown Section -->
+  <section class="countdown">
+    <h2>Next Project Launch In:</h2>
+    <div class="timer">
+      <span>10</span>d :
+      <span>23</span>h :
+      <span>45</span>m :
+      <span>12</span>s
+    </div>
+  </section>
+
+  <!-- Logo Carousel -->
+  <section class="logo-carousel">
+    <h2>Trusted By</h2>
+    <div class="carousel-track">
+      <img src="https://via.placeholder.com/100x50?text=Logo1" alt="Logo 1">
+      <img src="https://via.placeholder.com/100x50?text=Logo2" alt="Logo 2">
+      <img src="https://via.placeholder.com/100x50?text=Logo3" alt="Logo 3">
+      <img src="https://via.placeholder.com/100x50?text=Logo4" alt="Logo 4">
+      <img src="https://via.placeholder.com/100x50?text=Logo5" alt="Logo 5">
+    </div>
+  </section>
+
+</body>
+</html>
