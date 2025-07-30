@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            background-color: aliceblue;
+            height: 200px;
+        }
+        .flex-container div {
+         background-color: dodgerblue;
+         color: white;
+         padding: 20px;
+         margin: 10px;
+         font-size: 30px;
+         text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex align example</h2>
+    <div class="flex-container">
+        <div>1</div>
+        <div style="align-self: flex-start;">2</div>
+        <div style="align-self: flex-end;">3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
