@@ -6,49 +6,63 @@
     <title>Document</title>
     <style>
         *{
-            padding: 0;
             margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
         .navbar{
             display: flex;
+            padding: 20px 40px;
             background-color: #333;
             justify-content: space-between;
-            color: white;
             align-items: center;
-            padding: 20px 40px;
         }
         .logo{
-            font-size: 24px;
+            color: white;
+            font-size: 25px;
             font-weight: bold;
         }
         .nav-links a{
-            color: white;
             text-decoration: none;
-            margin-left: 20px;
+            margin: 0 10px;
+            color: white;
             font-weight: 500;
         }
         .nav-links a:hover{
-            color: #00b894;
+            color: red;
         }
         .hero{
-            background: linear-gradient(to right, #00b894, #c0e1e1);
-            padding: 100px 20px;
+            background-image: url("Realestat.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            min-height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             color: white;
         }
         .hero-text h1{
-            font-size: 45px;
+            font-size: 3rem;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .hero-text p{
-            font-size: 20px;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.5);
         }
-        footer{
-            background-color: #555;
-            padding: 20px 40px;
-            color: white;
-            text-align: center;
+        footer{background-color: #555;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    @media (max-width: 768px) {
+        .hero-text h1{
+            font-size: 2.5rem;
+        }
+        .hero-text p{
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -58,18 +72,17 @@
         <nav class="nav-links">
             <a href="#">Home</a>
             <a href="#">About</a>
-            <a href="#">Projects</a>
             <a href="#">Contact</a>
         </nav>
     </header>
     <section class="hero">
         <div class="hero-text">
-            <h1>My name is Suraj</h1>
-            <p>I am frontend Developer</p>
+        <h1>Welcome to my world</h1>
+        <p>I am a front end Developer</p>            
         </div>
     </section>
     <footer>
-        <p>@2023 All Rights Reserved</p>
+        <p>&copy; 2023 Suraj. All rights reserved.</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+        .row{
+            display: flex;
+        }
+        .column{
+           flex: 1;
+            padding: 20px;
+            height: 300px;
+        }
+        footer{
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .row{
+                flex-direction: column;
+            }
+                }
+    </style>
+</head>
+<body>
+    <header>Head</header>
+    <div class="row">
+        <div class="column" style="background-color: #aaa;">column1</div>
+        <div class="column" style="background-color: #bbb;">column2</div>
+        <div class="column" style="background-color: #ccc;">column3</div>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>
