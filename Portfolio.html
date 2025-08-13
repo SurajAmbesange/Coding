@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Frontend Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.5s forwards;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.7s forwards;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.9s forwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 1.1s forwards;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        section:nth-child(even) {
+            background: #f8f9ff;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-category h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .project-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: #f0f3ff;
+            color: #667eea;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-link {
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .project-link.primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .project-link.secondary {
+            border: 2px solid #667eea;
+            color: #667eea;
+        }
+
+        /* Experience & Education */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .timeline-content .company {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content .period {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .contact-item a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #667eea;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 60px);
+                left: 40px !important;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">YourName</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Suraj Ambesange</h1>
+                <div class="subtitle">Frontend Developer</div>
+                <p>Creating beautiful, responsive, and user-friendly web experiences with modern technologies</p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="S" alt="" srcset="">
+                </div>
+                <div class="about-text">
+                    <h3>Passionate Frontend Developer</h3>
+                    <p>I'm a dedicated frontend developer with a passion for creating intuitive and visually appealing web applications. With expertise in modern JavaScript frameworks and a keen eye for design, I transform ideas into engaging digital experiences.</p>
+                    <p>I believe in writing clean, maintainable code and staying up-to-date with the latest web technologies. My goal is to build applications that not only look great but also provide exceptional user experiences.</p>
+                    <p>When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or learning about emerging web technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">SASS/SCSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Styling & Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Material-UI</span>
+                        <span class="skill-tag">Styled Components</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Workflow</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Webpack</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">ESLint</span>
+                        <span class="skill-tag">Prettier</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">E-Commerce Platform</div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-featured e-commerce application with shopping cart, payment integration, and admin dashboard.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">Live Demo</a>
+                            <a href="#" class="project-link secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">Task Manager App</div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>A productivity app with drag-and-drop functionality, real-time collaboration, and progress tracking.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Vuex</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Vuetify</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">Live Demo</a>
+                            <a href="#" class="project-link secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">Weather Dashboard</div>
+                    <div class="project-content">
+                        <h3>Weather Dashboard</h3>
+                        <p>A responsive weather application with location-based forecasts, interactive maps, and detailed analytics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">CSS Grid</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">Live Demo</a>
+                            <a href="#" class="project-link secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Experience & Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Frontend Developer</h3>
+                        <div class="company">Tech Innovations Inc.</div>
+                        <div class="period">2022 - Present</div>
+                        <p>Leading frontend development for enterprise applications, mentoring junior developers, and implementing modern React architectures.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Frontend Developer</h3>
+                        <div class="company">Digital Solutions Co.</div>
+                        <div class="period">2020 - 2022</div>
+                        <p>Developed responsive web applications using Vue.js and React, collaborated with UX/UI designers, and optimized application performance.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Junior Web Developer</h3>
+                        <div class="company">StartUp Labs</div>
+                        <div class="period">2019 - 2020</div>
+                        <p>Built interactive websites and web applications, learned modern frontend technologies, and contributed to open-source projects.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Computer Science Degree</h3>
+                        <div class="company">University of Technology</div>
+                        <div class="period">2015 - 2019</div>
+                        <p>Bachelor's degree in Computer Science with focus on web development, software engineering, and user interface design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Let's Work Together</h2>
+            <div class="contact-content">
+                <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>LinkedIn</h3>
+                        <a href="#" target="_blank">linkedin.com/in/yourname</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>GitHub</h3>
+                        <a href="#" target="_blank">github.com/yourusername</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.skill-category, .project-card, .timeline-item, .contact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
