@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(90deg, rgba(98, 46, 131, 0.405) 0%, #71C4FFFF 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .card{
+            width: 1100px;
+            height: 500px;
+            color: white;
+            background-color: purple;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box1{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 30px;
+        }
+        .box1 h2{
+            font-size: 2.5rem;
+        }
+        .box1 p{
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+        .box2{
+            width: 50%;
+            background-image: url(Sideimage.avif);
+        }
+        .box2 img{
+            width: 100%;
+            height: 100%;
+        }
+        .boxitem{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            
+            <div class="box1">
+                <h2>Get insights that help your business grow</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident molestias assumenda labore nostrum consectetur officia nemo voluptates exercitationem consequuntur eos!</p>
+                
+                <div class="boxitem">
+                    <div class="details">
+                        <h3>10K+</h3>
+                        <p>Comments</p>
+                    </div>
+                
+                    <div class="details">
+                        <h3>214 </h3>
+                        <p>Paid Users</p>            
+                    </div>
+
+                    <div class="details">
+                        <h3>12M+</h3>
+                        <p>Views</p>            
+                    </div>
+                </div>    
+            </div> 
+
+
+            <div class="box2">
+                <img src="Sideimage.avif" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
