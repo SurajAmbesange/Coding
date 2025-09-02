@@ -20,7 +20,7 @@ body{
 }
 .item{
     background-color: purple;
-    border: 10px solid black;
+    border: 5px solid black;
     color: white;
     display: flex;
     justify-content: center;
