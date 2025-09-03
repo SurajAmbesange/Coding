@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color:#6366F1;
+    --accent-color:#3f83f8;
+    --text-color:#333333;
+    --link-color:#2563eb;
+    --background-color:#ffffff;
+    --light-gray:#føføf0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family: poppins;
+    height: 100%;
+    padding: 0.1rem;
+    text-align: center;
+    background-color: var(--background-color);
+}
+.header-content{
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    gap: 0.5rem;
+    color: var(--text-color);
+}
+.logo-icon{
+    width: 4rem;
+    height: 4rem;
+}
+.header-text{
+    font-size:2rem;
+    font-weight: bold;
+}
+.nav{
+    display: none;
+    gap: 1rem;
+}
+@media screen and (min-width:768px){
+    .nav{
+        display:flex;
+    }
+    
+}
+.nav-link{
+    color: var(--text-color);
+    transform: color 0.1s;
+}
+.nav-link:hover{
+    color: var(--link-color);
+}
+.contact-button{
+    padding: 10px;
+    display: none;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border-radius: 5px ;
+    font-size: 1rem;
+}
+@media screen and (min-width:768px) {
+    .contact-button{
+        display: block;
+    }
+} 
+
+.menu{
+    display:none;
+    background-color: var(--background-color);
+    border: none;
+}
+@media screen and (max-width:768px){
+    .menu{
+        display: flex;
+}
+}
