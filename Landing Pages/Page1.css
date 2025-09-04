@@ -80,6 +80,7 @@ body{
     display:none;
     background-color: var(--background-color);
     border: none;
+    padding: 0.5rem 1.1rem;
 }
 @media screen and (max-width:768px){
     .menu{

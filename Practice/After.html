@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After Text Example</title>
+    <style>
+        .starting-text::before{
+            content: " Starting ";
+            color: red;
+            font-weight: bold;
+            font-size: large;   
+        }
+        
+        .ending-text::after{
+            content: " Ending";
+            color: orange;
+            font-weight: bold;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <p class="starting-text">is here</p>
+    <p class="ending-text">Here is the</p>
+</body>
+</html>
