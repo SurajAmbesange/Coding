@@ -6,7 +6,7 @@
     --text-color:#333333;
     --link-color:#2563eb;
     --background-color:#ffffff;
-    --light-gray:#føføf0;
+    --light-gray:#f0f0f0;
 }
 *{
     margin: 0;
@@ -125,7 +125,7 @@ body{
 }
 .section-description{
     font-size: 1rem;
-    color: var(--light-gray);
+    color: var(--gray);
 }
 
 .button-group{
@@ -186,4 +186,43 @@ body{
     .image-container{
         height: 70vh;
     }
+}
+
+.company-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: slideleft 1s ease forwards;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.company-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3.8rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem 2.5rem;
+    background-color: var(--light-gray);
+    border-radius: 1rem;
+}
+@media screen and (min-width:768px) {
+    .company-grid{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .company-title{
+        font-size: 2.2rem;
+    }
+}
+.company-logo{
+    font-size: 1rem;
+    font-weight: 500;
+    gap: 0.5rem;
+    display: flex;
+}
+.google-logo{
+    height: 25px;
+}
+.logo-txt{
+    font-size: 1rem;
 }
