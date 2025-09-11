@@ -310,3 +310,36 @@ body{
     flex-direction: column;
     gap: 1rem;
 }   
+.testimonial-container{
+    background-color: var(--background-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.testimonial-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.testimonial-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.testimonial-card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    border: 1px solid black;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+.testimonial-avtar{
+    width: 3rem;
+    height: 3rem;
+}
