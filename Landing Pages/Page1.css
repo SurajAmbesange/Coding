@@ -86,7 +86,7 @@ body{
 @media screen and (max-width:768px){
     .menu{
         display: flex;
-}
+    }
 }
 .contentleft{
    text-align: center;
