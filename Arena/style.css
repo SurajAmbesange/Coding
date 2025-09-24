@@ -70,3 +70,66 @@ body{
         display: flex;       
     }
 }
+.hero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+    background-image: url("/Pictures/Arena.jpeg");
+    background: center cover;
+    gap: 1rem;
+    padding: 1rem;
+}
+.hero-title{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--background-color);
+}
+.hero-label{
+    font-size: 1.7rem;
+    color: var(--background-color);
+}
+@media screen and (max-width:768px) {
+    .hero-title{
+        font-size: 2rem;
+    }
+    .hero-label{
+    font-size: 1.2rem;
+    }
+    .hero{
+        height: 50vh;
+        background-size: cover;
+    }
+}
+.main-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1280px;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.head-title{
+    font-size: 3rem;
+    padding-top: 1rem;
+}
+.content-desc{
+    font-size: 1rem;
+    color: var(--text-color);
+}
+.left-container{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.venue{
+    height: 50vh;
+}
+.arena{
+    width: 100%;
+    height: auto
+}
+
