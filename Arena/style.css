@@ -23,7 +23,7 @@ body {
     color: var(--text-color);
     line-height: 1.8;
 }
-
+    
 /* -------------------- Header -------------------- */
 .header-content {
     max-width: 1280px;
