@@ -90,18 +90,35 @@ body {
 /* -------------------- Hero -------------------- */
 .hero {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
     padding: 1rem;
     margin-bottom: 3rem;
     text-align: center;
-    background: url("/Pictures/Arena.jpeg") center/cover no-repeat; /* ✅ fixed */
+    background: url("/Pictures/Arena-hero.png") center/cover no-repeat; /* ✅ fixed */
 }
-
+.hero-subtitle{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 0.1rem 1rem;
+    gap: 0.3rem;
+}
+.map{
+    width: 1rem;
+    height: auto;
+}
+.subtitle{
+    color: var(--background-color);
+    font-size: 1rem;
+    word-spacing: 0.1rem;
+}
 .hero-title {
     font-size: 3rem;
     font-family: var(--font-family);
@@ -113,11 +130,59 @@ body {
     font-size: 1.7rem;
     color: var(--background-color);
 }
+.key-container{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+.key-content{
+    display: flex;
+    gap: 1rem;
+}
+.key-image{
+    width: 2.5rem;
+    border-radius: 1.4rem;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+}
+.key-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+}
+.key-title{
+    color: var(--background-color);
+    font-size: 1.3rem;
+}
+.key-desc{
+    color: var(--background-color);
+    text-align: start;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.button-group{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    border: none;
+}   
+.start-button, .tour-button{
+    background-color: var(--primary-color);
+    padding: 0.1rem 1.5rem;
+    border-radius: 1rem;
+    color: var(--background-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
 @media (max-width: 768px) {
-    .hero { height: 50vh; }
+    .hero { height: 70vh; }
+    .subtitle{ font-size: 1rem;}
     .hero-title { font-size: 1.9rem; }
     .hero-label { font-size: 1.2rem; }
+    .key-container { display: none; }
+    .start-button, .tour-button{ font-size: 1rem; }
 }
 
 /* -------------------- About Section -------------------- */
@@ -126,7 +191,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
     padding: 1rem;
     margin: 0 auto;
 }
@@ -174,7 +239,7 @@ body {
 .feature-container {
     background-color: var(--primary-color);
     padding: 2rem 1rem;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     text-align: center;
     color: var(--background-color);
 }
@@ -259,11 +324,12 @@ body {
 }
 
 .plan-button {
-    padding: 0.8rem 1.8rem;
+    padding: 0.5rem 1.5rem;
     border: none;
     background-color: var(--primary-color);
     color: var(--background-color);
     font-size: 1.2rem;
+    font-weight: 600;
     border-radius: 2rem;
     cursor: pointer; /* ✅ added */
     transition: background 0.3s ease;
@@ -330,16 +396,16 @@ body {
 .venue-left {
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
+    gap: 0.4rem;
     background-color: var(--background-color);
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
 
 .venue-title {
     font-family: var(--font-family);
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: start;
 }
 
@@ -401,12 +467,22 @@ body {
     background-color: var(--primary-color);
     color: var(--background-color);
     font-size: 1.2rem;
-    padding: 1rem 1.8rem;
+    font-weight: 600;
+    padding: 0.6rem 1.8rem;
+    margin-top: 0.7rem;
     border-radius: 2rem;
     cursor: pointer; /* ✅ added */
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .brochure:hover {
     background-color: #c92a2a;
+}
+
+
+/* ----------Getting-Here-Section------------------ */
+
+.getting-here-container{
+    background-color: var(--primary-color);
+    padding: 3rem 1rem;
 }
