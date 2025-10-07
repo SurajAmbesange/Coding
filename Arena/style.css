@@ -51,6 +51,7 @@ body {
 .nav-link {
     color: var(--text-color);
     font-size: 1.1rem;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -59,10 +60,10 @@ body {
 }
 
 .contact-us {
-    padding: 0.7rem 1.5rem;
+    padding: 0.3rem 1rem;
     background-color: var(--primary-color);
     color: var(--background-color);
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     display: none;
     font-size: 1rem;
 }
@@ -90,7 +91,7 @@ body {
 /* -------------------- Hero -------------------- */
 .hero {
     width: 100%;
-    height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,7 +170,7 @@ body {
 }   
 .start-button, .tour-button{
     background-color: var(--primary-color);
-    padding: 0.1rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 1rem;
     color: var(--background-color);
     font-size: 1.2rem;
@@ -191,8 +192,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
-    padding: 1rem;
+    gap: 3rem;
+    padding-bottom: 3rem;
     margin: 0 auto;
 }
 
@@ -216,12 +217,16 @@ body {
 .cont-title {
     font-size: 3rem;
     font-family: var(--font-family);
-    padding-bottom: 1.5rem;
-    animation: fadeInUp 1200ms ease 2s forwards;
+    animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
+
 .content-desc {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: justify;
 }
 
@@ -253,7 +258,11 @@ body {
     font-size: 3.5rem;
     font-family: var(--font-family);
     margin-bottom: 2rem;
-    animation: fadeInUp 1200ms ease 4s forwards;
+    animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .feature-grid {
@@ -266,6 +275,10 @@ body {
     .feature-grid { grid-template-columns: 1fr; }
     .main-title { font-size: 2.5rem; }
 }
+@media (max-width: 1024px) {
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 
 .feature-card {
     background-color: var(--background-color);
@@ -315,9 +328,12 @@ body {
     font-size: 3.5rem;
     font-family: var(--font-family);
     margin-bottom: 1rem;
-    animation: fadeInUp 1200ms ease 4s forwards;
+    animation-name: fadeInUp;
 }
-
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
 .plan-desc {
     font-size: 1.4rem;
     margin-bottom: 2rem;
@@ -360,7 +376,7 @@ body {
     font-size: 3.5rem;
     margin-bottom: 2rem;
     text-align: center;
-    animation: fadeInUp 1200ms ease 4s forwards;
+    animation-name: fadeInUp;
 }
 
 .venue-info {
@@ -483,6 +499,44 @@ body {
 /* ----------Getting-Here-Section------------------ */
 
 .getting-here-container{
-    background-color: var(--primary-color);
-    padding: 3rem 1rem;
+    padding: 0 2rem;
+}
+.getting-here-content{
+    margin: 0 auto;
+    max-width: 1280px;
+    text-align: center;
+}
+.getting-title{
+    font-size: 3.5rem;
+    font-family: var(--font-family);
+    animation-name: fadeInUp;
+}
+.getting-desc{
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+}
+.grid-container{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.getting-grid{
+    display: flex;
+    text-align: start;
+    gap: 1.5rem;
+}
+.getting-img{
+    width: 2.8rem;
+    height: 3rem;
+    color: var(--primary-color);
+}
+.getting-title1{
+    color:var(--primary-color);
+}
+@media (max-width: 768px) {
+    .grid-container { gap: 1rem; 
+        grid-template-columns: repeat(1,1fr) }
+    .plan-desc { font-size: 1.2rem; }
+    .getting-title { font-size: 2.5rem;}
+    .getting-desc{ font-size: 1.1rem; }
 }
