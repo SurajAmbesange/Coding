@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hovereffects</title>
+    <style>
+    .frame{
+        width: 400px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        background-color: rgb(12, 42, 61);
+        position: absolute;
+        margin-top: -200px;
+        margin-left: -200px;
+        box-shadow: 4px 8px 16px rgba(0,0,0,0.6);;
+    }
+    .center{
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    button{
+    width: 200px;
+    height: 70px;
+    font-size: 25px;
+    box-shadow: 11px 11px 1px #8e44ad;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    }
+    button:hover{
+        box-shadow: -11px -11px 1px #8e44ad;
+        transform: translate(13px, 12px);
+    }
+</style>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <button>Hover me</button>
+        </div>
+    </div>
+
+</body>
+</html>
