@@ -21,27 +21,69 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    gap: 1rem;
 }
 
 .logo-icon{
     width: 12rem;
     height: auto;
 } 
+.nav{
+    display: none;
+    gap: 1.5rem;
+}
+.nav-link{
+    color: var(--light-gray);
+    font-size: 1.2rem;
+}
+@media screen and (min-width:768px) {
+    .nav{ display: flex; }
+}
 .menu{
     border: none;
-    background-color: var(--light-gray);
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+.menu img{
     width: 2rem;
     height: 2rem;
+}
+@media (max-width:768px) {
+    .menu{ display: flex;
+    background: white;}
 }
 .description-container{
     padding: 4rem;
 }
 .description-content{
-    max-width: 968px;
+    max-width: 1280px;
+    display: flex;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.description1{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--text-color);
+    padding-right: 1.5rem;
+    border-right: 2px solid;
+    border-color: black;
+    
 }
 .description{
-    font-size: 40px;
-    font-weight: 100;
+    font-size: 1.5rem;
+    font-weight: 200;
     color: var(--text-color);
+    padding-left: 1rem;
+}
+.title{
+    max-width: 1280px;
+    display: flex;
+    margin: 0 auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+
 }
 
