@@ -24,6 +24,7 @@
             padding: 15px 0;
             background: rgba(255, 255, 255, 0.95);
             transition: all 0.3s ease;
+            position: fixed;
         }
         nav .container{
             display: flex;
@@ -47,15 +48,27 @@
             color: #333;
             font-weight: 500;
             transition: all 0.3s ease;
+            position: relative;
         }
         .nav-links a:hover{
             color: #764ba2;
         }
         .nav-links a::after{
             content: "";
-            
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
         }
-    
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .test{
+            margin-top: 80px;
+        }
     </style>
 </head>
 <body>
@@ -70,5 +83,15 @@
         </ul>
     </div>
     </nav>
+    <div class="test">
+    <h2>Javascript example</h2>
+    <p id="demo">A paragraph</p>
+    <button type="button" onclick="myFunction()">CLick me</button>
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML="Paragraph changed"
+        }
+    </script>
+    </div>
 </body>
 </html>
