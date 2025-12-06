@@ -9,5 +9,5 @@
 // }
 
 for (i=1; i<=5; i++){
-    console.log("Suraj")
+    console.log("Suraj Ambesange")
 }
