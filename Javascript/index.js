@@ -12,6 +12,6 @@
 //     console.log("Suraj Ambesange")
 // }
 
-let sentence="My name is Suraj";
+let sentence="My name is Suraj Ambesange";
 let words=sentence.split(" ");
 console.log(words);
