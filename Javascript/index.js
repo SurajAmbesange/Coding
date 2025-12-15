@@ -13,5 +13,5 @@
 // }
 
 let sentence="My name is Suraj Ambesange";
-let words=sentence.split(" ");
-console.log(words);
+let word=sentence.split(" ");
+console.log(word);
