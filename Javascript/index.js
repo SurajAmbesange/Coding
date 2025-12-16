@@ -12,6 +12,13 @@
 //     console.log("Suraj Ambesange")
 // }
 
-let sentence="My name is Suraj Ambesange";
-let word=sentence.split(" ");
-console.log(word);
+// let sentence="My name is Suraj Ambesange";
+// let word=sentence.split(" ");
+// console.log(word);
+
+function myName(){
+    for(let i=0; i<=10; i++){
+    console.log(i);
+    }
+}
+myName();    
