@@ -24,5 +24,6 @@
 // myName();    
 let arr=[1,2,3];
 console.log(typeof(arr));
-arr.pop('Suraj');
+arr.push('Suraj');
+arr.shift('Suraj');
 console.log(arr);
