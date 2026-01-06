@@ -24,6 +24,6 @@
 // myName();    
 let arr=[1,2,3];
 console.log(typeof(arr));
-arr.push('Suraj');
-arr.shift('Suraj');
-console.log(arr);
+arr.push('Suraj Ambesange');
+arr.unshift('Suraj');
+console.log(arr);clearInterval
