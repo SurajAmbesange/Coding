@@ -22,8 +22,16 @@
 //     }
 // }
 // myName();    
-let arr=[1,2,3];
-console.log(typeof(arr));
-arr.push('Suraj Ambesange');
-arr.unshift('Suraj');
-console.log(arr);clearInterval
+
+
+// let arr=[1,2,3];
+// console.log(typeof(arr));
+// arr.push('Suraj Ambesange');
+// arr.unshift('Suraj');
+// console.log(arr);clearInterval
+
+
+let arr=[1,5,7,9,8,4,2,6,3];
+arr.sort().reverse();
+console.log(arr.indexOf(6));
+  
