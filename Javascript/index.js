@@ -31,7 +31,42 @@
 // console.log(arr);clearInterval
 
 
-let arr=[1,5,7,9,8,4,2,6,3];
-arr.sort().reverse();
-console.log(arr.indexOf(6));
-  
+// let arr=[1,5,7,9,8,4,2,6,3];
+// arr.sort().reverse();
+// console.log(arr.indexOf(6));
+
+
+
+// function sayMyName(finalName) {
+//     console.log(finalName);
+// }
+
+// sayMyName("Suraj");
+
+// let greet =function(){
+//     console.log("MY name is Suraj" );
+// }
+// greet();
+
+// function greetMe(greet, fullName){
+//     console.log("Hello", fullName);
+//     greet();
+// }
+// function greet(){
+//     console.log("Greetings of the Day");
+// }
+// greetMe(greet, "Suraj");
+
+const arr=[
+    function(a,b){
+        return(a+b);
+    },
+    function(a,b){
+        return(a-b);
+    },
+    function(a,b){
+        return(a*b);
+    },]
+    let first=arr[2];
+    let ans = first(100,5);
+    console.log(ans)
