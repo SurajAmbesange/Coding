@@ -87,5 +87,5 @@ running(){
 
 let obj = new Human();
 console.log(obj.age);
-
+console.log(obj.wt);
 obj.walking();
