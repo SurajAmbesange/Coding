@@ -57,16 +57,35 @@
 // }
 // greetMe(greet, "Suraj");
 
-const arr=[
-    function(a,b){
-        return(a+b);
-    },
-    function(a,b){
-        return(a-b);
-    },
-    function(a,b){
-        return(a*b);
-    },]
-    let first=arr[2];
-    let ans = first(100,5);
-    console.log(ans)
+// const arr=[
+//     function(a,b){
+//         return(a+b);
+//     },
+//     function(a,b){
+//         return(a-b);
+//     },
+//     function(a,b){
+//         return(a*b);
+//     },]
+//     let first=arr[2];
+//     let ans = first(100,5);
+//     console.log(ans)
+
+class Human{
+    age = 25;
+    ht = 170;
+    wt = 55;
+
+
+walking(){
+    console.log("I ama walking");
+}
+running(){
+    console.log("I am running");
+}
+}
+
+let obj = new Human();
+console.log(obj.age);
+
+obj.walking();
