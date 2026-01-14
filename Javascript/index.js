@@ -71,21 +71,25 @@
 //     let ans = first(100,5);
 //     console.log(ans)
 
-class Human{
-    age = 25;
-    ht = 170;
-    wt = 55;
+// class Human{
+//     age = 25;
+//     ht = 170;
+//     wt = 55;
 
 
-walking(){
-    console.log("I ama walking");
-}
-running(){
-    console.log("I am running");
-}
-}
+// walking(){
+//     console.log("I ama walking");
+// }
+// running(){
+//     console.log("I am running");
+// }
+// }
 
-let obj = new Human();
-console.log(obj.age);
-console.log(obj.wt);
-obj.walking();
+// let obj = new Human();
+// console.log(obj.age);
+// console.log(obj.wt);
+// obj.walking();
+
+
+let currdate = new Date();
+console.log(currdate);
