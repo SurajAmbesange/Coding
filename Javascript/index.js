@@ -91,5 +91,8 @@
 // obj.walking();
 
 
-let currdate = new Date();
-console.log(currdate);
+// let currdate = new Date();
+// console.log(currdate);
+
+
+
