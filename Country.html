@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Example</title>
+</head>
+<body>
+    <p id="country"></p>
+    <script>
+        const person = {
+            firstName: "Suraj",
+            lastname: "Ambesange",
+            Age: 25,
+            car: {
+                brand:'Porsche',
+                model: 'GT',
+            }
+        };
+
+        let {firstName, car:{brand, model}} = person;
+        let message = `My name is ${firstName}, and I drive a ${brand} ${model}`
+        document.getElementById("country").innerHTML = message;
+    </script>
+</body>
+</html>

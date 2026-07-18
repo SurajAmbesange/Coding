@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curent Year</title>
+</head>
+<body>
+    <p id="year"></p>
+    <script>
+        function dateInfo(dat){
+            const d = dat.getDate();
+            const m = dat.getMonth()+1;
+            const y = dat.getFullYear();
+            return [d,m,y];
+        }
+        const [date, month, year] = dateInfo(new Date());
+        document.getElementById("year").innerHTML = "The date is "+ date + " The month is " + month + " The year is " + year; 
+    </script>
+</body>
+</html>
